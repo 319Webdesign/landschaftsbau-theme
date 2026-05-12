@@ -28,7 +28,7 @@ export function Process() {
   return (
     <section
       id="ablauf"
-      className="scroll-mt-24 bg-kiss-forest px-6 py-24 text-kiss-bg lg:px-8"
+      className="scroll-mt-24 bg-capan-forest px-6 py-24 text-capan-bg lg:px-8"
       aria-labelledby="ablauf-heading"
     >
       <div className="mx-auto max-w-7xl">
@@ -39,7 +39,7 @@ export function Process() {
           transition={{ duration: 0.45 }}
           className="max-w-2xl"
         >
-          <p className="text-sm font-semibold uppercase tracking-widest text-kiss-earth">
+          <p className="text-sm font-semibold uppercase tracking-widest text-capan-lime">
             So arbeiten wir
           </p>
           <h2 id="ablauf-heading" className="mt-3 font-serif text-3xl font-semibold sm:text-4xl">
@@ -62,10 +62,10 @@ export function Process() {
                 transition={{ duration: 0.45, delay: i * 0.08 }}
                 className="relative rounded-2xl border border-white/15 bg-white/5 p-8 backdrop-blur-sm"
               >
-                <span className="absolute -top-3 left-8 inline-flex rounded-full bg-kiss-earth px-3 py-0.5 text-xs font-bold text-kiss-forest">
+                <span className="absolute -top-3 left-8 inline-flex rounded-full bg-capan-lime px-3 py-0.5 text-xs font-bold text-capan-forest">
                   Schritt {s.step}
                 </span>
-                <Icon className="mt-4 h-10 w-10 text-kiss-earth" aria-hidden />
+                <Icon className="mt-4 h-10 w-10 text-capan-lime" aria-hidden />
                 <h3 className="mt-4 font-serif text-xl font-semibold">{s.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-white/80">{s.text}</p>
               </motion.li>

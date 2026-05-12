@@ -9,6 +9,9 @@ type BeforeAfterSliderProps = {
   afterSrc: string;
   beforeLabel?: string;
   afterLabel?: string;
+  /** Regler-Hinweis unter dem Slider (z. B. nur einmal pro Sektion). */
+  showHint?: boolean;
+  className?: string;
 };
 
 export function BeforeAfterSlider({
@@ -16,6 +19,8 @@ export function BeforeAfterSlider({
   afterSrc,
   beforeLabel = "Vorher",
   afterLabel = "Nachher",
+  showHint = true,
+  className = "",
 }: BeforeAfterSliderProps) {
   const [pct, setPct] = useState(52);
   const dragging = useRef(false);
@@ -50,10 +55,10 @@ export function BeforeAfterSlider({
   };
 
   return (
-    <div className="w-full">
+    <div className={["min-w-0", className].filter(Boolean).join(" ")}>
       <div
         ref={containerRef}
-        className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-kiss-slate/10 shadow-lg ring-1 ring-kiss-forest/10 select-none"
+        className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-capan-slate/10 shadow-lg ring-1 ring-capan-forest/10 select-none"
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
         onPointerLeave={onPointerUp}
@@ -62,7 +67,7 @@ export function BeforeAfterSlider({
           src={afterSrc}
           alt=""
           fill
-          sizes="(max-width: 768px) 100vw, 896px"
+          sizes="(max-width: 1023px) 100vw, 45vw"
           placeholder="blur"
           blurDataURL={BLUR_DATA_URL}
           className="object-cover"
@@ -78,7 +83,7 @@ export function BeforeAfterSlider({
             src={beforeSrc}
             alt=""
             fill
-            sizes="(max-width: 768px) 100vw, 896px"
+            sizes="(max-width: 1023px) 100vw, 45vw"
             placeholder="blur"
             blurDataURL={BLUR_DATA_URL}
             className="object-cover"
@@ -92,7 +97,7 @@ export function BeforeAfterSlider({
         />
         <button
           type="button"
-          className="absolute top-1/2 z-20 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 cursor-grab touch-none items-center justify-center rounded-full border-2 border-white bg-kiss-forest text-kiss-earth shadow-lg active:cursor-grabbing"
+          className="absolute top-1/2 z-20 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 cursor-grab touch-none items-center justify-center rounded-full border-2 border-white bg-capan-forest text-capan-lime shadow-lg active:cursor-grabbing"
           style={{ left: `${pct}%` }}
           onPointerDown={onPointerDown}
           aria-label="Vergleich Vorher und Nachher verschieben"
@@ -107,13 +112,15 @@ export function BeforeAfterSlider({
         <span className="pointer-events-none absolute left-4 top-4 rounded-full bg-black/55 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
           {beforeLabel}
         </span>
-        <span className="pointer-events-none absolute right-4 top-4 rounded-full bg-kiss-earth/95 px-3 py-1 text-xs font-semibold text-kiss-forest backdrop-blur-sm">
+        <span className="pointer-events-none absolute right-4 top-4 rounded-full bg-capan-lime/95 px-3 py-1 text-xs font-semibold text-capan-forest backdrop-blur-sm">
           {afterLabel}
         </span>
       </div>
-      <p className="mt-3 text-center text-xs text-kiss-slate">
-        Ziehen Sie den Regler — echte Projektqualität zeigt sich im Vorher/Nachher-Vergleich.
-      </p>
+      {showHint ? (
+        <p className="mt-3 text-center text-xs text-capan-slate lg:text-left">
+          Ziehen Sie den Regler — echte Projektqualität zeigt sich im Vorher/Nachher-Vergleich.
+        </p>
+      ) : null}
     </div>
   );
 }

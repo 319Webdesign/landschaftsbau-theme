@@ -1,17 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --kiss-bg: #f8f9fa;
-  --kiss-forest: #1b3022;
-  --kiss-earth: #c6ac8f;
-  --kiss-slate: #4a4e69;
+  --capan-bg: #f6faf7;
+  --capan-forest: #1b3d2a;
+  --capan-lime: #8fd14a;
+  --capan-earth: #8f6a45;
+  --capan-slate: #3d5245;
 }
 
 @theme inline {
-  --color-kiss-bg: var(--kiss-bg);
-  --color-kiss-forest: var(--kiss-forest);
-  --color-kiss-earth: var(--kiss-earth);
-  --color-kiss-slate: var(--kiss-slate);
+  --color-capan-bg: var(--capan-bg);
+  --color-capan-forest: var(--capan-forest);
+  --color-capan-lime: var(--capan-lime);
+  --color-capan-earth: var(--capan-earth);
+  --color-capan-slate: var(--capan-slate);
   --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
@@ -21,7 +23,7 @@ html {
 }
 
 body {
-  background-color: var(--kiss-bg);
-  color: var(--kiss-forest);
+  background-color: var(--capan-bg);
+  color: var(--capan-forest);
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }

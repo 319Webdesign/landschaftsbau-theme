@@ -2,21 +2,21 @@
 
 import { MessageCircle, Phone } from "lucide-react";
 
-/** Platzhalter — Vorwahl 06203 (Region Bergstraße); durch echte Nummer ersetzen. */
-const TEL = "+4962030000000";
-const TEL_DISPLAY = "+49 (6203) 000 000";
-const WA_LINK = "https://wa.me/4962030000000";
+/** Platzhalter — Vorwahl 06231 (Region Frankenthal/Marnheim); durch echte Nummer ersetzen. */
+const TEL = "+4962310000000";
+const TEL_DISPLAY = "+49 (6231) 000 000";
+const WA_LINK = "https://wa.me/4962310000000";
 
 export function MobileQuickContact() {
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-40 flex border-t border-kiss-forest/10 bg-kiss-bg/95 px-4 py-3 backdrop-blur-md md:hidden"
+      className="fixed inset-x-0 bottom-0 z-40 flex border-t border-capan-forest/10 bg-capan-bg/95 px-4 py-3 backdrop-blur-md md:hidden"
       role="region"
       aria-label="Schnellkontakt"
     >
       <a
         href={`tel:${TEL.replace(/\s/g, "")}`}
-        className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-kiss-forest py-3 text-sm font-semibold text-kiss-bg"
+        className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-capan-forest py-3 text-sm font-semibold text-capan-bg"
       >
         <Phone className="h-5 w-5 shrink-0" aria-hidden />
         Anrufen
@@ -25,7 +25,7 @@ export function MobileQuickContact() {
         href={WA_LINK}
         target="_blank"
         rel="noopener noreferrer"
-        className="ml-3 flex flex-1 items-center justify-center gap-2 rounded-xl border-2 border-kiss-forest bg-transparent py-3 text-sm font-semibold text-kiss-forest"
+        className="ml-3 flex flex-1 items-center justify-center gap-2 rounded-xl border-2 border-capan-forest bg-transparent py-3 text-sm font-semibold text-capan-forest"
       >
         <MessageCircle className="h-5 w-5 shrink-0" aria-hidden />
         WhatsApp

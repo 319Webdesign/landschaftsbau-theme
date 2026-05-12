@@ -13,9 +13,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "KISS Garten- und Landschaftsbau GmbH | Gorxheimertal",
+  title: "CapanGartenbau | Garten- und Landschaftsbau in Marnheim",
   description:
-    "Individueller Landschaftsbau, Poolanlagen und Gartenpflege in Gorxheimertal und Umgebung. Meisterbetrieb für Ihren Traumgarten.",
+    "Gartenbau, Terrassen, Pflasterarbeiten und Pflege in Marnheim, Frankenthal und Umgebung. Ihr Partner für den Außenraum in der Vorderpfalz.",
 };
 
 export default function RootLayout({

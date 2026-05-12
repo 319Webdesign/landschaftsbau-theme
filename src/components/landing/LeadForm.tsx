@@ -50,13 +50,13 @@ export function LeadForm() {
           transition={{ duration: 0.45 }}
           className="mx-auto max-w-2xl text-center"
         >
-          <p className="text-sm font-semibold uppercase tracking-widest text-kiss-earth">
+          <p className="text-sm font-semibold uppercase tracking-widest text-capan-lime">
             Lead-Generator
           </p>
-          <h2 id="kontakt-heading" className="mt-3 font-serif text-3xl font-semibold text-kiss-forest sm:text-4xl">
+          <h2 id="kontakt-heading" className="mt-3 font-serif text-3xl font-semibold text-capan-forest sm:text-4xl">
             In 3 Schritten zum Traumgarten
           </h2>
-          <p className="mt-4 text-lg text-kiss-slate">
+          <p className="mt-4 text-lg text-capan-slate">
             Kurz beschreiben — wir melden uns für Ihre kostenlose Erstberatung.
           </p>
         </motion.div>
@@ -66,38 +66,38 @@ export function LeadForm() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.5 }}
-          className="mx-auto mt-14 max-w-xl rounded-2xl border border-kiss-forest/10 bg-white p-8 shadow-lg md:p-10"
+          className="mx-auto mt-14 max-w-xl rounded-2xl border border-capan-forest/10 bg-white p-8 shadow-lg md:p-10"
         >
-          <ol className="mb-10 flex justify-center gap-2 text-xs font-semibold uppercase tracking-wider text-kiss-slate">
+          <ol className="mb-10 flex justify-center gap-2 text-xs font-semibold uppercase tracking-wider text-capan-slate">
             {[1, 2, 3].map((n) => (
               <li key={n} className="flex items-center gap-2">
                 <span
                   className={`flex h-8 w-8 items-center justify-center rounded-full ${
-                    step >= n ? "bg-kiss-forest text-kiss-bg" : "bg-kiss-bg text-kiss-slate"
+                    step >= n ? "bg-capan-forest text-capan-bg" : "bg-capan-bg text-capan-slate"
                   }`}
                 >
                   {n}
                 </span>
-                {n < 3 && <span className="hidden text-kiss-earth sm:inline">—</span>}
+                {n < 3 && <span className="hidden text-capan-lime sm:inline">—</span>}
               </li>
             ))}
           </ol>
 
           {done ? (
             <div className="flex flex-col items-center gap-4 py-8 text-center">
-              <CheckCircle2 className="h-14 w-14 text-kiss-forest" aria-hidden />
-              <p className="font-serif text-2xl font-semibold text-kiss-forest">
+              <CheckCircle2 className="h-14 w-14 text-capan-forest" aria-hidden />
+              <p className="font-serif text-2xl font-semibold text-capan-forest">
                 Vielen Dank für Ihre Anfrage!
               </p>
-              <p className="max-w-sm text-kiss-slate">
-                Wir prüfen Ihre Angaben und melden uns zeitnah bei Ihnen aus Gorxheimertal.
+              <p className="max-w-sm text-capan-slate">
+                Wir prüfen Ihre Angaben und melden uns zeitnah bei Ihnen aus Marnheim.
               </p>
             </div>
           ) : (
             <form onSubmit={submit} className="space-y-8">
               {step === 1 && (
                 <div>
-                  <label htmlFor="project-type" className="block text-sm font-semibold text-kiss-forest">
+                  <label htmlFor="project-type" className="block text-sm font-semibold text-capan-forest">
                     Projektart
                   </label>
                   <select
@@ -105,7 +105,7 @@ export function LeadForm() {
                     required
                     value={projectType}
                     onChange={(e) => setProjectType(e.target.value)}
-                    className="mt-2 w-full rounded-xl border border-kiss-forest/15 bg-kiss-bg px-4 py-3 text-kiss-forest outline-none ring-kiss-earth focus:ring-2"
+                    className="mt-2 w-full rounded-xl border border-capan-forest/15 bg-capan-bg px-4 py-3 text-capan-forest outline-none ring-capan-lime focus:ring-2"
                   >
                     <option value="">Bitte wählen …</option>
                     {projectTypes.map((p) => (
@@ -116,7 +116,7 @@ export function LeadForm() {
                   </select>
                   <button
                     type="button"
-                    className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-kiss-forest py-3 font-semibold text-kiss-bg transition hover:bg-kiss-forest/90 disabled:opacity-40"
+                    className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-capan-forest py-3 font-semibold text-capan-bg transition hover:bg-capan-forest/90 disabled:opacity-40"
                     disabled={!canNext1}
                     onClick={() => setStep(2)}
                   >
@@ -128,14 +128,14 @@ export function LeadForm() {
 
               {step === 2 && (
                 <div>
-                  <label htmlFor="budget" className="block text-sm font-semibold text-kiss-forest">
-                    Budgetrahmen <span className="font-normal text-kiss-slate">(optional)</span>
+                  <label htmlFor="budget" className="block text-sm font-semibold text-capan-forest">
+                    Budgetrahmen <span className="font-normal text-capan-slate">(optional)</span>
                   </label>
                   <select
                     id="budget"
                     value={budget}
                     onChange={(e) => setBudget(e.target.value)}
-                    className="mt-2 w-full rounded-xl border border-kiss-forest/15 bg-kiss-bg px-4 py-3 text-kiss-forest outline-none ring-kiss-earth focus:ring-2"
+                    className="mt-2 w-full rounded-xl border border-capan-forest/15 bg-capan-bg px-4 py-3 text-capan-forest outline-none ring-capan-lime focus:ring-2"
                   >
                     {budgets.map((b) => (
                       <option key={b} value={b}>
@@ -146,14 +146,14 @@ export function LeadForm() {
                   <div className="mt-6 flex gap-3">
                     <button
                       type="button"
-                      className="flex-1 rounded-full border border-kiss-forest/25 py-3 font-medium text-kiss-forest transition hover:bg-kiss-bg"
+                      className="flex-1 rounded-full border border-capan-forest/25 py-3 font-medium text-capan-forest transition hover:bg-capan-bg"
                       onClick={() => setStep(1)}
                     >
                       Zurück
                     </button>
                     <button
                       type="button"
-                      className="flex-1 rounded-full bg-kiss-forest py-3 font-semibold text-kiss-bg transition hover:bg-kiss-forest/90"
+                      className="flex-1 rounded-full bg-capan-forest py-3 font-semibold text-capan-bg transition hover:bg-capan-forest/90"
                       onClick={() => setStep(3)}
                     >
                       Weiter
@@ -164,7 +164,7 @@ export function LeadForm() {
 
               {step === 3 && (
                 <div>
-                  <label htmlFor="zip" className="block text-sm font-semibold text-kiss-forest">
+                  <label htmlFor="zip" className="block text-sm font-semibold text-capan-forest">
                     Postleitzahl
                   </label>
                   <input
@@ -174,18 +174,18 @@ export function LeadForm() {
                     pattern="[0-9]{4,5}"
                     maxLength={5}
                     minLength={4}
-                    placeholder="z. B. 69517"
+                    placeholder="z. B. 67297"
                     value={zip}
                     onChange={(e) => setZip(e.target.value)}
-                    className="mt-2 w-full rounded-xl border border-kiss-forest/15 bg-kiss-bg px-4 py-3 text-kiss-forest outline-none ring-kiss-earth placeholder:text-kiss-slate/50 focus:ring-2"
+                    className="mt-2 w-full rounded-xl border border-capan-forest/15 bg-capan-bg px-4 py-3 text-capan-forest outline-none ring-capan-lime placeholder:text-capan-slate/50 focus:ring-2"
                   />
-                  <p className="mt-2 text-xs text-kiss-slate">
+                  <p className="mt-2 text-xs text-capan-slate">
                     Hilft uns, Ihre Anfrage der richtigen Einsatzplanung zuzuordnen.
                   </p>
                   <div className="mt-6 flex gap-3">
                     <button
                       type="button"
-                      className="flex-1 rounded-full border border-kiss-forest/25 py-3 font-medium text-kiss-forest transition hover:bg-kiss-bg"
+                      className="flex-1 rounded-full border border-capan-forest/25 py-3 font-medium text-capan-forest transition hover:bg-capan-bg"
                       onClick={() => setStep(2)}
                     >
                       Zurück
@@ -193,7 +193,7 @@ export function LeadForm() {
                     <button
                       type="submit"
                       disabled={!canSubmit}
-                      className="flex-1 rounded-full bg-kiss-earth py-3 font-semibold text-kiss-forest transition hover:bg-kiss-earth/90 disabled:opacity-40"
+                      className="flex-1 rounded-full bg-capan-lime py-3 font-semibold text-capan-forest transition hover:bg-capan-lime/90 disabled:opacity-40"
                     >
                       Anfrage senden
                     </button>

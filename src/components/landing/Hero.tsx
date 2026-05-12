@@ -24,49 +24,49 @@ export function Hero() {
       <motion.div style={{ y }} className="absolute inset-0 scale-105">
         <Image
           src={heroImage}
-          alt="Luxuriöser Privatgarten mit gepflegtem Rasen, Staudenbeet, Formschnitt und gestalteten Baumstämmen unter blauem Himmel"
+          alt="Moderner Garten mit Pool, großflächiger Stein-Terrasse, grünem Rasen und Wohnhaus mit Photovoltaik in warmem Abendlicht"
           fill
           priority
           sizes="100vw"
           placeholder="blur"
           blurDataURL={BLUR_DATA_URL}
-          className="object-cover object-[center_35%] sm:object-center"
+          className="object-cover object-center sm:object-[32%_48%] lg:object-[35%_45%]"
         />
       </motion.div>
       <motion.div
         style={{ opacity }}
-        className="absolute inset-0 bg-gradient-to-b from-kiss-forest/75 via-kiss-forest/55 to-kiss-forest/85"
+        className="absolute inset-0 bg-[linear-gradient(180deg,rgba(27,61,42,0.94)_0%,rgba(27,61,42,0.86)_12%,rgba(27,61,42,0.58)_28%,rgba(27,61,42,0.22)_48%,rgba(27,61,42,0.06)_68%,transparent_90%)] sm:bg-[radial-gradient(ellipse_100%_82%_at_6%_90%,rgba(27,61,42,0.6),transparent_58%),linear-gradient(90deg,rgba(27,61,42,0.94)_0%,rgba(27,61,42,0.86)_14%,rgba(27,61,42,0.56)_32%,rgba(27,61,42,0.12)_50%,rgba(27,61,42,0.04)_64%,rgba(27,61,42,0.012)_78%,transparent_92%)]"
         aria-hidden
       />
-      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-6 pb-24 pt-32 lg:px-8 lg:pb-32 lg:pt-40">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-start px-6 pb-20 pt-14 sm:justify-end sm:pb-36 sm:pt-20 lg:px-8 lg:pb-44 lg:pt-24">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, delay: 0.15, ease: [0.22, 1, 0.36, 1] as const }}
           className="max-w-3xl"
         >
-          <p className="mb-4 inline-flex items-center rounded-full border border-white/25 bg-white/10 px-4 py-1 text-xs font-medium uppercase tracking-[0.2em] text-kiss-earth backdrop-blur-sm">
-            Meisterbetrieb · Gorxheimertal
+          <p className="mb-4 inline-flex items-center rounded-full border border-white/25 bg-white/10 px-4 py-1 text-xs font-medium tracking-[0.18em] text-capan-lime backdrop-blur-sm">
+            Gartenbau · Poolbereiche · Außenanlagen
           </p>
           <h1 className="font-serif text-4xl font-semibold leading-[1.15] text-white sm:text-5xl lg:text-6xl">
-            KISS Gartenbau: Wir gestalten Ihren Rückzugsort im Freien.
+            Wir gestalten Außenbereiche, die Eindruck machen.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl">
-            Individueller Landschaftsbau, Poolanlagen und Gartenpflege in Gorxheimertal und
-            Umgebung.
+            Terrassen, Poolbereiche, Rasenflächen, Pflasterarbeiten und Gartenpflege – Capan Gartenbau
+            gestaltet hochwertige Außenanlagen in Marnheim, Frankenthal und Umgebung.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Link
               href="#kontakt"
-              className="inline-flex items-center justify-center rounded-full bg-kiss-earth px-8 py-3.5 text-base font-semibold text-kiss-forest shadow-lg transition hover:bg-kiss-earth/90"
+              className="inline-flex items-center justify-center rounded-full bg-capan-lime px-8 py-3.5 text-base font-semibold text-capan-forest shadow-lg transition hover:bg-capan-lime/90"
             >
-              Kostenlose Erstberatung
+              Projekt kostenlos anfragen
             </Link>
             <Link
-              href="#projekte"
+              href="#stimmen"
               className="inline-flex items-center justify-center rounded-full border-2 border-white/80 bg-transparent px-8 py-3.5 text-base font-semibold text-white transition hover:bg-white/10"
             >
-              Unsere Projekte
+              Referenzen ansehen
             </Link>
           </div>
         </motion.div>

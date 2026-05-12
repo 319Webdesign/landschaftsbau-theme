@@ -61,16 +61,16 @@ export function FocusGrid() {
           transition={{ duration: 0.45 }}
           className="max-w-2xl"
         >
-          <p className="text-sm font-semibold uppercase tracking-widest text-kiss-earth">
+          <p className="text-sm font-semibold uppercase tracking-widest text-capan-lime">
             Leistungsschwerpunkte
           </p>
           <h2
             id="leistungen-heading"
-            className="mt-3 font-serif text-3xl font-semibold text-kiss-forest sm:text-4xl"
+            className="mt-3 font-serif text-3xl font-semibold text-capan-forest sm:text-4xl"
           >
             Präzision im Detail — von der Idee bis zur fertigen Außenanlage
           </h2>
-          <p className="mt-4 text-lg text-kiss-slate">
+          <p className="mt-4 text-lg text-capan-slate">
             Wählen Sie einen Bereich — wir kombinieren Gestaltung, Technik und Pflege zu einem
             stimmigen Gesamtbild.
           </p>
@@ -94,25 +94,25 @@ export function FocusGrid() {
                   onMouseLeave={() => setActive(null)}
                   onFocus={() => setActive(col.id)}
                   onBlur={() => setActive(null)}
-                  className={`group relative flex h-full w-full flex-col rounded-2xl border bg-white p-8 text-left shadow-sm transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-kiss-earth focus-visible:ring-offset-2 focus-visible:ring-offset-kiss-bg ${
+                  className={`group relative flex h-full w-full flex-col rounded-2xl border bg-white p-8 text-left shadow-sm transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-capan-lime focus-visible:ring-offset-2 focus-visible:ring-offset-capan-bg ${
                     isActive
-                      ? "border-kiss-earth/60 shadow-md ring-1 ring-kiss-earth/30"
-                      : "border-kiss-forest/10 hover:border-kiss-earth/40"
+                      ? "border-capan-lime/60 shadow-md ring-1 ring-capan-lime/30"
+                      : "border-capan-forest/10 hover:border-capan-lime/40"
                   }`}
                   aria-expanded={isActive}
                 >
-                  <span className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-kiss-forest/90 text-kiss-earth transition-transform duration-300 group-hover:scale-105">
+                  <span className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-capan-forest/90 text-capan-lime transition-transform duration-300 group-hover:scale-105">
                     <Icon className="h-6 w-6" aria-hidden />
                   </span>
-                  <span className="font-serif text-xl font-semibold text-kiss-forest">
+                  <span className="font-serif text-xl font-semibold text-capan-forest">
                     {col.title}
                   </span>
-                  <span className="mt-2 text-sm font-medium text-kiss-earth">{col.accent}</span>
-                  <ul className="mt-6 space-y-3 border-t border-kiss-forest/10 pt-6 text-kiss-slate">
+                  <span className="mt-2 text-sm font-medium text-capan-lime">{col.accent}</span>
+                  <ul className="mt-6 space-y-3 border-t border-capan-forest/10 pt-6 text-capan-slate">
                     {col.items.map((line) => (
                       <li key={line} className="flex gap-2 text-sm leading-relaxed">
                         <span
-                          className="mt-2 h-1 w-1 shrink-0 rounded-full bg-kiss-earth"
+                          className="mt-2 h-1 w-1 shrink-0 rounded-full bg-capan-lime"
                           aria-hidden
                         />
                         {line}
